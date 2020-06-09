@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -43,6 +44,7 @@ public class ClockDetail extends AppCompatActivity implements View.OnClickListen
     String hourformat;
     String minuteformat;
     Context context = ClockDetail.this;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,8 @@ public class ClockDetail extends AppCompatActivity implements View.OnClickListen
         title = findViewById(R.id.title);
         title.setText("闹钟详情");
         calendar = Calendar.getInstance();
+        spinner = findViewById(R.id.spinner);
+
         initView();
 
     }
