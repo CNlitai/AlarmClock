@@ -1,13 +1,16 @@
-package com.example.dell.alarmalert_csdn;
-
+package com.example.dell.AlarmClock;
+/**
+ * @author created by 惠普
+ * @package name com.example.dell.AlarmClock
+ * @date created on 2020/6/9
+ * @description
+ */
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,8 +25,8 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-import static com.example.dell.alarmalert_csdn.MainActivity.list;
-import static com.example.dell.alarmalert_csdn.MainActivity.timeAdapter;
+import static com.example.dell.AlarmClock.MainActivity.list;
+import static com.example.dell.AlarmClock.MainActivity.timeAdapter;
 
 public class ClockDetail extends AppCompatActivity implements View.OnClickListener {
     private Calendar calendar;

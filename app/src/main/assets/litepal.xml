@@ -5,6 +5,6 @@
     </dbname>
     <version value="5" />
     <list>
-        <mapping class="com.example.dell.alarmalert_csdn.Clock" />
+        <mapping class="com.example.dell.AlarmClock.Clock" />
     </list>
 </litepal>

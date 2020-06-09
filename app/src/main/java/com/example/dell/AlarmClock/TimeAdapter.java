@@ -1,11 +1,15 @@
-package com.example.dell.alarmalert_csdn;
-
+package com.example.dell.AlarmClock;
+/**
+ * @author created by 惠普
+ * @package name com.example.dell.AlarmClock
+ * @date created on 2020/6/9
+ * @description
+ */
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.icu.util.ValueIterator;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -19,12 +23,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import static android.content.Context.ALARM_SERVICE;
-import static com.example.dell.alarmalert_csdn.MainActivity.timeAdapter;
 
 public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.ViewHolder> {
     List<Clock> list;

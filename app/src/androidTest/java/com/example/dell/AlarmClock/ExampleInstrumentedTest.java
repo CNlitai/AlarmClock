@@ -1,4 +1,4 @@
-package com.example.dell.alarmalert_csdn;
+package com.example.dell.AlarmClock;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

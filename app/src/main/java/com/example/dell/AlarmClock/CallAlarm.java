@@ -1,10 +1,14 @@
-package com.example.dell.alarmalert_csdn;
-
+package com.example.dell.AlarmClock;
+/**
+ * @author created by 惠普
+ * @package name com.example.dell.AlarmClock
+ * @date created on 2020/6/9
+ * @description
+ */
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 public class CallAlarm extends BroadcastReceiver {
     @Override

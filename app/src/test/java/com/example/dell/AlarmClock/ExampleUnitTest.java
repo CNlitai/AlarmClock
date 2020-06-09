@@ -1,4 +1,4 @@
-package com.example.dell.alarmalert_csdn;
+package com.example.dell.AlarmClock;
 
 import org.junit.Test;
 
