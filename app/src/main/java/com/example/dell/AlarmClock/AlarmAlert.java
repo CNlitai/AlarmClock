@@ -49,7 +49,7 @@ public class AlarmAlert extends Activity  {
 
         ShakeHelper shakeHelper = new ShakeHelper(AlarmAlert.this);
 
-        //mediaPlayer.stop();
+        mediaPlayer.stop();
 
 
     }
