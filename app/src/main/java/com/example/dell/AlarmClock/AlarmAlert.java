@@ -14,10 +14,14 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.dell.AlarmClock.ShakeHelper;
+
+import java.io.IOException;
 
 public class AlarmAlert extends Activity  {
     private MediaPlayer mediaPlayer;
@@ -49,12 +53,38 @@ public class AlarmAlert extends Activity  {
 
         ShakeHelper shakeHelper = new ShakeHelper(AlarmAlert.this);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
+
+//        private void startAlarm() {
+//        mediaPlayer = MediaPlayer.create(this, getSystemDefultRingtoneUri());
+//        mediaPlayer.setLooping(true);
+//        try {
+//            mediaPlayer.prepare();
+//        } catch (IllegalStateException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        mediaPlayer.start();
+//    }
+//
+//        private void stopAlarm(){
+//        mediaPlayer.stop();
+//    }
+//
+//        /**
+//         * 获取系统自带铃声的uri
+//         * @return RingtoneManager.getActualDefaultRingtoneUri(this,
+//                RingtoneManager.TYPE_RINGTONE)
+//         */
+//        private Uri getSystemDefultRingtoneUri() {
+//        return RingtoneManager.getActualDefaultRingtoneUri(this,
+//                RingtoneManager.TYPE_RINGTONE);
+//    }
+//    }
 
 
-    }
 
 
-
-
+}
 }

@@ -5,17 +5,30 @@ package com.example.dell.AlarmClock;
  * @date created on 2020/6/9
  * @description
  */
+
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,12 +37,16 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
-import static com.example.dell.AlarmClock.MainActivity.list;
 import static com.example.dell.AlarmClock.MainActivity.timeAdapter;
+import static com.example.dell.AlarmClock.MainActivity.list;
 
 public class ClockDetail extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "";
     private Calendar calendar;
     private TextView show_hour;
     private TextView show_minute;
@@ -45,6 +62,11 @@ public class ClockDetail extends AppCompatActivity implements View.OnClickListen
     String minuteformat;
     Context context = ClockDetail.this;
     private Spinner spinner;
+    List<String> list_notification = new ArrayList<String>();
+    List<String> list_alarm = new ArrayList<String>();
+    List<String> list_music = new ArrayList<String>();
+    private ArrayAdapter mArrayAdapter;
+    private Button button_alarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +87,12 @@ public class ClockDetail extends AppCompatActivity implements View.OnClickListen
         title = findViewById(R.id.title);
         title.setText("闹钟详情");
         calendar = Calendar.getInstance();
-        spinner = findViewById(R.id.spinner);
-
+        button_alarm = findViewById(R.id.button_alarm);
+        button_alarm.setOnClickListener(this);
         initView();
+
+
+
 
     }
 
@@ -155,6 +180,12 @@ public class ClockDetail extends AppCompatActivity implements View.OnClickListen
                 finish();
                 break;
 
+
+            case R.id.button_alarm:
+                Intent intent2 = new Intent(this, RingActivity.class);
+                startActivity(intent2);
+                break;
+
         }
     }
 
@@ -173,4 +204,6 @@ public class ClockDetail extends AppCompatActivity implements View.OnClickListen
         }
         return s;
     }
+
+
 }

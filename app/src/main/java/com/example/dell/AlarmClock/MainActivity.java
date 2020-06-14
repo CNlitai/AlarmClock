@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.explain:
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle("软件说明");
-                        builder.setMessage("");
+                        builder.setMessage("1712李泰出品");
                         builder.setCancelable(true);
                         builder.setPositiveButton("我知道了", new DialogInterface.OnClickListener() {
                             @Override

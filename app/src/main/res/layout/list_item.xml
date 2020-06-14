@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/info_iv1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/ring"/>
+
+
+
+    <TextView
+        android:id="@+id/ring_tv"
+        android:textSize="30sp"
+        android:layout_toRightOf="@id/info_iv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+</RelativeLayout>
